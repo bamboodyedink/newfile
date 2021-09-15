@@ -1,0 +1,285 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-02 15:33:04
+ * @LastEditTime: 2021-09-13 11:44:13
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \天眼前端课\第二阶段\考核2\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>渔业资源管理系统-登录</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/bootstrapValidator.css" />
+    <link rel="stylesheet" href="./css/index.css">
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.js"></script>
+    <script type="text/javascript" src="./js/bootstrapValidator.js"></script>
+    <script src="./js/language/zh_CN.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="body">
+        <h1>海南城市大脑</h1>
+        <h2>渔业资源管理系统</h2>
+        <div id="register">
+            <h5>
+                <p class="changeColor one" onclick="changStyle()">账号密码登录</p>
+                <p class="changeColor" onclick="changStyle()">手机号登录</p>
+            </h5>
+            <div class="container" style="display: block;">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <form id="defaultForm" method="post" class="form-horizontal" action="ajaxSubmit.php">
+                            <div class="form-group">
+                                <div class="col-lg-5">
+                                    <input type="text" class="form-control" id="text" name="username" placeholder="请输入账号或手机号码" onclick="this.myprop = 'text'" />
+                                    <img class="inco" src="./img/user.png" alt="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-5">
+                                    <input type="password" class="form-control" name="password" placeholder="请输入密码" />
+                                    <img class="inco" src="./img/password.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-lg-9 col-lg-offset-3">
+                                    <a href="./mainbody.html"><button type="submit" class="btn btn-primary">登录</button></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <form id="defaultForm" method="post" class="form-horizontal" action="ajaxSubmit.php">
+                            <div class="form-group">
+                                <div class="col-lg-5">
+                                    <input type="text" class="form-control" id="text" name="username" placeholder="请输入手机号码" onclick="this.myprop = 'text'" />
+                                    <img class="inco" src="./img/tel.png" alt="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-5" style="display: flex;justify-content: space-between;    flex-direction: row;
+                                align-items: center;">
+                                    <input type="text" class="form-control" name="text" placeholder="请输入验证码" style="width: 270px;" />
+                                    <img class="inco" src="./img/password.png" alt="" style="margin-left: 9px;margin-top: 1px;">
+                                    <button type="button" class="form-control-button">获取验证码</button>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-lg-9 col-lg-offset-3">
+                                    <button type="submit" class="btn btn-primary">手机登录</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $('#defaultForm')
+                        .bootstrapValidator({
+                            message: 'This value is not valid',
+                            feedbackIcons: {
+                                valid: 'glyphicon glyphicon-ok',
+                                invalid: 'glyphicon glyphicon-remove',
+                                validating: 'glyphicon glyphicon-refresh'
+                            },
+                            fields: {
+                                username: {
+                                    // message: 'The username is not valid',
+                                    validators: {
+                                        notEmpty: {
+                                            message: '登录帐号不能为空'
+                                        },
+                                        stringLength: {
+                                            min: 3,
+                                            max: 15,
+                                            message: '长度在 3 到 15 个字符'
+                                        },
+                                        /*remote: {
+                                            url: 'remote.php',
+                                            message: 'The username is not available'
+                                        },*/
+                                        regexp: {
+                                            regexp: /^[a-zA-Z0-9_\.]+$/,
+                                            // message: 'The username can only consist of alphabetical, number, dot and underscore'
+                                        }
+                                    }
+                                },
+                                password: {
+                                    validators: {
+                                        notEmpty: {
+                                            message: '密码不能为空'
+                                        }
+                                    }
+                                }
+                            }
+                        })
+                        .on('success.form.bv', function(e) {
+                            // Prevent form submission
+                            e.preventDefault();
+
+                            // Get the form instance
+                            var $form = $(e.target);
+
+                            // Get the BootstrapValidator instance
+                            var bv = $form.data('bootstrapValidator');
+
+                            // Use Ajax to submit form data
+                            $.post($form.attr('action'), $form.serialize(), function(result) {
+                                console.log(result);
+                            }, 'json');
+
+
+                            // //nput失去焦点后 如果值发生改变后，触发
+                            // $('input[name="price_min"]').change(function() {
+                            //     alert(1)
+                            // })
+                        });
+                });
+            </script>
+        </div>
+        <div id="foot">
+            <a href="javascript:;" data-toggle="modal" data-target="#myModal">忘记密码</a>
+            <a href="./logon.html">信息员注册</a>
+        </div>
+        <!-- Button trigger modal -->
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">忘记密码</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form id="none-password">
+                            <div class="form-group">
+                                <label class="none-lable"><span>*</span>手机号码</label>
+                                <div class="input-body">
+                                    <input type="tel" name="phone" class="form-input orm-phone">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="none-lable"><span>*</span>验证码</label>
+                                <div class="input-body">
+                                    <input type="Verification" name="Verification" class="form-input form-Verification">
+                                    <button type="click" class="form-button-Verification">获取验证码</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="none-lable"><span>*</span>密码</label>
+                                <div class="input-body">
+                                    <input type="password" name="password" class="form-input form-password">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="none-lable"><span>*</span>确认密码</label>
+                                <div class="input-body">
+                                    <input type="password" name="confirm_password" class="form-input form-confirm_password">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary">修改</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#none-password').bootstrapValidator({
+                        message: '信息不能为空',
+                        fields: {
+                            phone: {
+                                validators: {
+                                    notEmpty: {
+                                        message: '手机号码不能为空！'
+                                    },
+                                    regexp: {
+                                        regexp: /^1[34578]\d{9}$/,
+                                        message: '请输入完整手机号码！'
+                                    }
+                                }
+                            },
+                            verifica: {
+                                notEmpty: {
+                                    massage: '验证码不能为空'
+                                },
+                                stringLength: {
+                                    max: 6
+                                },
+                                regexp: {
+                                    regexp: /^[0-9]*$/
+                                }
+                            },
+                            password: {
+                                enabled: false,
+                                validators: {
+                                    notEmpty: {
+                                        message: '密码不能为空'
+                                    },
+                                    identical: {
+                                        field: 'confirm_password',
+                                        message: '两次密码不一致'
+                                    }
+                                }
+                            },
+                            confirm_password: {
+                                enabled: false,
+                                validators: {
+                                    notEmpty: {
+                                        message: '密码不能为空'
+                                    },
+                                    identical: {
+                                        field: 'password',
+                                        message: '两次密码不一致'
+                                    }
+                                }
+                            }
+                        }
+                    })
+                    // 如果密码不为空，则启用密码/确认密码验证器
+                $('#none-password').find('[name="password"]').on('keyup', function() {
+                    var isEmpty = $(this).val() == '';
+                    $('#none-password').bootstrapValidator('enableFieldValidators', 'password', !isEmpty)
+                        .bootstrapValidator('enableFieldValidators', 'confirm_password', !isEmpty);
+                    if ($(this).val().length == 1) {
+                        $('#none-password').bootstrapValidator('validateField', 'password')
+                            .bootstrapValidator('validateField', 'confirm_password');
+                    }
+                });
+            });
+            let prompt = document.getElementsByClassName('help-block');
+            let inputs = document.getElementsByClassName('form-input');
+            if (prompt == 1) {
+                inputs.style.border = red;
+            }
+        </script>
+        <img class="more" src="./img/m.0c3af3b8.png" alt="">
+        <p class="imgtxt">手机端二维码</p>
+        <span>@copyright 2021 阿里云计算有限公司出品</span>
+        <script src="./js/index.js"></script>
+    </div>
+</body>
+
+</html>

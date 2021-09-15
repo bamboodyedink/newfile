@@ -1,0 +1,126 @@
+@import url(./even.css);
+label {
+    font-weight: normal;
+}
+
+span {
+    color: rgb(255, 97, 97);
+}
+
+a {
+    display: flex;
+    font-size: 12px;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #409eff;
+}
+
+a img {
+    margin-right: 5px;
+    width: 15px;
+}
+
+a .imgleftother {
+    display: none;
+}
+
+a:hover .imgleft {
+    display: none;
+}
+
+a:hover .imgleftother {
+    display: block;
+}
+
+i {
+    color: gainsboro;
+    padding: 15px;
+    margin-top: -6px;
+}
+
+.row {
+    margin: 50px auto;
+    width: 1000px;
+}
+
+.rowbody {
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+    padding: 20px;
+}
+
+.rowbodytop {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.page-header {
+    border: none;
+}
+
+.form-control-button {
+    color: #fff;
+    background: #409eff;
+    border-radius: 4px;
+    border: none;
+    width: 100px;
+    height: 35px;
+}
+
+.verifi {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+
+.dropdownlabel {
+    margin-right: 25px;
+}
+
+.btn-default {
+    color: #ccc;
+}
+
+.btn-group img {
+    width: 20px;
+}
+
+.selectbody {
+    display: flex;
+    justify-content: center;
+}
+
+.selectbody .form-group {
+    width: 270px;
+}
+
+.selectbody .form-group select {
+    width: 100px;
+}
+
+.form-control-feedback {
+    opacity: 0;
+}
+
+.btn-primary {
+    border: none;
+    background: #409eff;
+    margin-left: 5px;
+}
+
+.btn-primaryother {
+    border: 1px solid #ccc;
+    color: #000;
+    background: none;
+}

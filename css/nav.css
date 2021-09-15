@@ -1,0 +1,92 @@
+@import url(./even.css);
+body {
+    background: #0086ff;
+    color: #fff;
+}
+
+h4 {
+    line-height: 40px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+img {
+    width: 20px;
+}
+
+ul {
+    height: 60px;
+    list-style: none;
+    display: flex;
+    margin-right: 320px;
+    margin-left: 170px;
+}
+
+li {
+    line-height: 60px;
+    text-align: center;
+    width: 150px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+a {
+    color: #fff;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #fff;
+}
+
+a:focus {
+    text-decoration: none;
+}
+
+li:hover {
+    background: rgb(0, 107, 204);
+}
+
+.head {
+    width: 40px;
+    border-radius: 5px;
+    /* padding-top: 10px; */
+}
+
+.nav {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    align-items: stretch;
+    /* justify-content: space-between; */
+}
+
+.user {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.user span,
+.arrow {
+    cursor: pointer;
+}
+
+
+/* .infrom {
+    display: none;
+    width: 100px;
+    height: 400px;
+    background: #083;
+}
+
+.arrow:focus .infrom {
+    display: block;
+} */

@@ -1,0 +1,284 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-13 15:39:31
+ * @LastEditTime: 2021-09-14 14:01:35
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \天眼前端课\第二阶段\考核2\production(html)\productionbody.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>productionbody</title>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/bootstrapValidator.css" />
+    <link rel="stylesheet" href="../css/plan(css)/planbody.css">
+    <link rel="stylesheet" href="../css/productionbody(css)/productionbody.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/bootstrapValidator.js"></script>
+</head>
+
+<body>
+    <div class="top">
+        <ol class="breadcrumb">
+            <li class="active">渔业资源管理系统</li>
+            <li class="active">生产主体库</li>
+            <li class="active">生产主体库</li>
+        </ol>
+    </div>
+    <div class="body">
+        <div class="row">
+            <div class="seach">
+                <div class="inpu">
+                    <label>主体名称</label>
+                    <input type="text" placeholder="请输入">
+                </div>
+                <div class="inpu">
+                    <label>主体类型</label>
+                    <select>
+                        <option style="color: gainsboro;" disabled selected
+                        hidden>请选择(个体户、合作社、企业)</option>
+                        <option>个体户</option>
+                        <option>合作社</option>
+                        <option>企业</option>
+                      </select>
+                </div>
+                <div class="inpu">
+                    <label>镇街</label>
+                    <select>
+                        <option style="color: gainsboro;" disabled selected
+                        hidden>选择镇街</option>
+                        <option>桂林街道</option>
+                        <option>九江镇</option>
+                        <option>西樵镇</option>
+                        <option>丹灶镇</option>
+                        <option>狮山镇</option>
+                        <option>大沥镇</option>
+                        <option>里水镇</option>
+                      </select>
+                </div>
+                <div class="inpu">
+                    <label>村居</label>
+                    <select>
+                        <option style="color: gainsboro;" disabled selected
+                        hidden>选择村居</option>
+                        <option disabled>无数据</option>
+                      </select>
+                </div>
+                <div class="inpu">
+                    <label>地址</label>
+                    <input type="text" placeholder="请输入">
+                </div>
+            </div>
+            <!-- /.seach -->
+            <div class="seach">
+                <div class="inpu">
+                    <label>联系人</label>
+                    <input type="text" placeholder="请输入">
+                </div>
+                <div class="inpu">
+                    <label>联系电话</label>
+                    <input type="tel" placeholder="请输入">
+                </div>
+                <div class="inpu">
+                    <label>身份证号</label>
+                    <input type="text" placeholder="请输入">
+                </div>
+                <div class="inpu check">
+                    <label>行业</label>
+                    <input type="checkbox" class="chek">
+                    <label>种植业</label>
+                    <input type="checkbox" class="chek">
+                    <label>渔业</label>
+                </div>
+                <button class="btn sub" type="submit">查询</button>
+                <button class="btn res" type="reset">重置</button>
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- 表格 -->
+    <div class="panel panel-default">
+        <!-- Table -->
+        <table class="table tal">
+            <thead>
+                <tr>
+                    <th>主体名称</th>
+                    <th>联系人</th>
+                    <th>电话</th>
+                    <th>主体类别</th>
+                    <th>主体组织机构代码</th>
+                    <th>基地</th>
+                    <th>主体地址</th>
+                    <th>
+                        <button class="btn sub subm">新增</button>
+                        <button class="btn sub subm submt">导出</button>
+                        <button class="btn sub subm submit">导入</button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>9.11新增测试合作社1</td>
+                    <td>9.11新增测试LBC1</td>
+                    <td>13795464899</td>
+                    <td>合作社</td>
+                    <td>182335385642164242</td>
+                    <td>基地</td>
+                    <td>浙江省杭州市</td>
+                    <td>
+                        <a href="#">查看</a>
+                        <a href="#">编辑</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9.11新增测试合作社1</td>
+                    <td>9.11新增测试LBC1</td>
+                    <td>13795464899</td>
+                    <td>合作社</td>
+                    <td>182335385642164242</td>
+                    <td>基地</td>
+                    <td>浙江省杭州市</td>
+                    <td>
+                        <a href="#">查看</a>
+                        <a href="#">编辑</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9.11新增测试合作社1</td>
+                    <td>9.11新增测试LBC1</td>
+                    <td>13795464899</td>
+                    <td>合作社</td>
+                    <td>182335385642164242</td>
+                    <td>基地</td>
+                    <td>浙江省杭州市</td>
+                    <td>
+                        <a href="#">查看</a>
+                        <a href="#">编辑</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9.11新增测试合作社1</td>
+                    <td>9.11新增测试LBC1</td>
+                    <td>13795464899</td>
+                    <td>合作社</td>
+                    <td>182335385642164242</td>
+                    <td>基地</td>
+                    <td>浙江省杭州市</td>
+                    <td>
+                        <a href="#">查看</a>
+                        <a href="#">编辑</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9.11新增测试合作社1</td>
+                    <td>9.11新增测试LBC1</td>
+                    <td>13795464899</td>
+                    <td>合作社</td>
+                    <td>182335385642164242</td>
+                    <td>基地</td>
+                    <td>浙江省杭州市</td>
+                    <td>
+                        <a href="#">查看</a>
+                        <a href="#">编辑</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9.11新增测试合作社1</td>
+                    <td>9.11新增测试LBC1</td>
+                    <td>13795464899</td>
+                    <td>合作社</td>
+                    <td>182335385642164242</td>
+                    <td>基地</td>
+                    <td>浙江省杭州市</td>
+                    <td>
+                        <a href="#">查看</a>
+                        <a href="#">编辑</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9.11新增测试合作社1</td>
+                    <td>9.11新增测试LBC1</td>
+                    <td>13795464899</td>
+                    <td>合作社</td>
+                    <td>182335385642164242</td>
+                    <td>基地</td>
+                    <td>浙江省杭州市</td>
+                    <td>
+                        <a href="#">查看</a>
+                        <a href="#">编辑</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9.11新增测试合作社1</td>
+                    <td>9.11新增测试LBC1</td>
+                    <td>13795464899</td>
+                    <td>合作社</td>
+                    <td>182335385642164242</td>
+                    <td>基地</td>
+                    <td>浙江省杭州市</td>
+                    <td>
+                        <a href="#">查看</a>
+                        <a href="#">编辑</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9.11新增测试合作社1</td>
+                    <td>9.11新增测试LBC1</td>
+                    <td>13795464899</td>
+                    <td>合作社</td>
+                    <td>182335385642164242</td>
+                    <td>基地</td>
+                    <td>浙江省杭州市</td>
+                    <td>
+                        <a href="#">查看</a>
+                        <a href="#">编辑</a>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="pag">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><a href="#">...</a></li>
+                                <li><a href="#">720</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+
+</html>

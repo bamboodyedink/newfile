@@ -1,0 +1,68 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-11 16:16:45
+ * @LastEditTime: 2021-09-14 19:12:38
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \天眼前端课\第二阶段\考核2\plan(html)\planleft.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>planleft</title>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/bootstrapValidator.css" />
+    <link rel="stylesheet" href="../css/plan(css)/planleft.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/bootstrapValidator.js"></script>
+</head>
+<style>
+    body {
+        height: 916px;
+        border-right: 1px solid gainsboro;
+    }
+    
+    .nav-tabs {
+        border: none;
+    }
+    
+    .dropdown-menu {
+        width: 100%;
+    }
+    
+    .dropdown-menu li {
+        width: 100%;
+    }
+    
+    .dropdown-menu li:hover {
+        color: #409eff;
+    }
+    
+    .nav {
+        width: 100%;
+        border: none;
+    }
+</style>
+
+<body>
+    <ul class="nav nav-tabs nav-stacked">
+        <li role="presentation" class="active"><a href="./planbody.html" target="planbody" style="border: none;">计划任务管理</a></li>
+        <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="./planbody1.html" role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="caret"></span>数据中心
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#">所有数据</a></li>
+                <li><a href="#">待审核数据</a></li>
+                <li><a href="#">不通过审核数据</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>

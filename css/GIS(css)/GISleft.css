@@ -1,0 +1,16 @@
+@import url(./even.css);
+body {
+    background: #ffe2e2;
+}
+
+ul {
+    margin-left: -40px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+a {
+    color: #000;
+}

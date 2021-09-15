@@ -1,0 +1,48 @@
+.row {
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.seach {
+    height: 200px;
+}
+
+.check {
+    margin-top: -22px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
+
+.check>.chek {
+    margin: 0;
+}
+
+.chek {
+    margin: 0;
+    margin-top: -4px;
+    border-color: rgb(243, 243, 243);
+    width: 13px;
+}
+
+.subm {
+    width: 70px;
+    height: 35px;
+}
+
+.submt {
+    background: goldenrod;
+}
+
+.submt:hover {
+    background: rgb(236, 187, 61);
+}
+
+.submit {
+    background: rgb(243, 119, 119);
+}
+
+.submit:hover {
+    background: rgb(250, 142, 142);
+}

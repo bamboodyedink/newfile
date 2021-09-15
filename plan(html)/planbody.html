@@ -1,0 +1,277 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-11 17:15:54
+ * @LastEditTime: 2021-09-13 16:31:59
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \天眼前端课\第二阶段\考核2\plan(html)\planbody.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>planbodytop</title>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/bootstrapValidator.css" />
+    <link rel="stylesheet" href="../css/plan(css)/planbody.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/bootstrapValidator.js"></script>
+</head>
+
+<body>
+    <div class="top">
+        <ol class="breadcrumb">
+            <li class="active">渔业资源管理系统</li>
+            <li class="active">计划任务管理系统</li>
+            <li class="active">计划任务管理系统</li>
+        </ol>
+    </div>
+    <div class="body">
+        <div class="row">
+            <div class="seach">
+                <div class="inpu">
+                    <label>任务名称</label>
+                    <input type="text">
+                </div>
+                <div class="inpu">
+                    <label>任务状态</label>
+                    <select>
+                        <option style="color: gainsboro;" disabled selected
+                        hidden>请选择任务状态</option>
+                        <option>全部</option>
+                        <option>未发布</option>
+                        <option>已发布</option>
+                        <option>已撤回</option>
+                        <option>已启用</option>
+                        <option>已停用</option>
+                      </select>
+                </div>
+                <button class="btn sub" type="submit">查询</button>
+                <button class="btn res" type="reset">重置</button>
+            </div>
+            <!-- /.seach -->
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- 表格 -->
+    <div class="panel panel-default">
+        <!-- Table -->
+        <table class="table tal">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>任务计划名称</th>
+                    <th>开始时间</th>
+                    <th>结束时间</th>
+                    <th>任务状态</th>
+                    <th>计划要求</th>
+                    <th class="log"> </th>
+                    <th><button class="btn sub subm">创建任务计划</button></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>472</td>
+                    <td>达萨达</td>
+                    <td>2021-08-30 00:00:00</td>
+                    <td>2021-09-23 00:00:00</td>
+                    <td>未发布</td>
+                    <td>打视</td>
+                    <td class="log"> </td>
+                    <td>
+                        <a href="#">发布</a>
+                        <a href="#">启用</a>
+                        <a href="#">查看</a>
+                        <a href="#">编辑</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>471</td>
+                    <td>1</td>
+                    <td>2021-09-09 00:00:00</td>
+                    <td>2021-09-17 00:00:00</td>
+                    <td>未发布</td>
+                    <td>sss</td>
+                    <td class="log"> </td>
+                    <td>
+                        <a href="#">发布</a>
+                        <a href="#">启用</a>
+                        <a href="#">查看</a>
+                        <a href="#">编辑</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>470</td>
+                    <td>西樵镇数据采集09010910</td>
+                    <td>2021-09-01 09:10:00</td>
+                    <td>2022-10-28 00:00:00</td>
+                    <td>已发布</td>
+                    <td>数据采集西樵镇0901</td>
+                    <td class="log"> </td>
+                    <td>
+                        <a href="#">发布</a>
+                        <a href="#">启用</a>
+                        <a href="#">查看</a>
+                        <a href="#">编辑</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>466</td>
+                    <td>aaa</td>
+                    <td>2021-08-28 00:00:00</td>
+                    <td>2021-10-06 00:00:00</td>
+                    <td>未发布</td>
+                    <td>ssss</td>
+                    <td class="log"> </td>
+                    <td>
+                        <a href="#">发布</a>
+                        <a href="#">启用</a>
+                        <a href="#">查看</a>
+                        <a href="#">编辑</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>466</td>
+                    <td>aaa</td>
+                    <td>2021-08-28 00:00:00</td>
+                    <td>2021-10-06 00:00:00</td>
+                    <td>未发布</td>
+                    <td>ssss</td>
+                    <td class="log"> </td>
+                    <td>
+                        <a href="#">发布</a>
+                        <a href="#">启用</a>
+                        <a href="#">查看</a>
+                        <a href="#">编辑</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>466</td>
+                    <td>aaa</td>
+                    <td>2021-08-28 00:00:00</td>
+                    <td>2021-10-06 00:00:00</td>
+                    <td>未发布</td>
+                    <td>ssss</td>
+                    <td class="log"> </td>
+                    <td>
+                        <a href="#">发布</a>
+                        <a href="#">启用</a>
+                        <a href="#">查看</a>
+                        <a href="#">编辑</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>466</td>
+                    <td>aaa</td>
+                    <td>2021-08-28 00:00:00</td>
+                    <td>2021-10-06 00:00:00</td>
+                    <td>未发布</td>
+                    <td>ssss</td>
+                    <td class="log"> </td>
+                    <td>
+                        <a href="#">发布</a>
+                        <a href="#">启用</a>
+                        <a href="#">查看</a>
+                        <a href="#">编辑</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>466</td>
+                    <td>aaa</td>
+                    <td>2021-08-28 00:00:00</td>
+                    <td>2021-10-06 00:00:00</td>
+                    <td>未发布</td>
+                    <td>ssss</td>
+                    <td class="log"> </td>
+                    <td>
+                        <a href="#">发布</a>
+                        <a href="#">启用</a>
+                        <a href="#">查看</a>
+                        <a href="#">编辑</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>466</td>
+                    <td>aaa</td>
+                    <td>2021-08-28 00:00:00</td>
+                    <td>2021-10-06 00:00:00</td>
+                    <td>未发布</td>
+                    <td>ssss</td>
+                    <td class="log"> </td>
+                    <td>
+                        <a href="#">发布</a>
+                        <a href="#">启用</a>
+                        <a href="#">查看</a>
+                        <a href="#">编辑</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>466</td>
+                    <td>aaa</td>
+                    <td>2021-08-28 00:00:00</td>
+                    <td>2021-10-06 00:00:00</td>
+                    <td>未发布</td>
+                    <td>ssss</td>
+                    <td class="log"> </td>
+                    <td>
+                        <a href="#">发布</a>
+                        <a href="#">启用</a>
+                        <a href="#">查看</a>
+                        <a href="#">编辑</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>466</td>
+                    <td>aaa</td>
+                    <td>2021-08-28 00:00:00</td>
+                    <td>2021-10-06 00:00:00</td>
+                    <td>未发布</td>
+                    <td>ssss</td>
+                    <td class="log"> </td>
+                    <td>
+                        <a href="#">发布</a>
+                        <a href="#">启用</a>
+                        <a href="#">查看</a>
+                        <a href="#">编辑</a>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="pag">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+
+</html>

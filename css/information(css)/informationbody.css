@@ -1,0 +1,8 @@
+.row {
+    width: 350px;
+    height: 70px;
+}
+
+.btn-default:active:hover {
+    background: none;
+}
