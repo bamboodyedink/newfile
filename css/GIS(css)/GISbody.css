@@ -1,0 +1,74 @@
+.btn-primary {
+    margin-top: 15px;
+    margin-left: 15px;
+    font-size: 15px;
+    background: #409eff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: hsl(212, 100%, 70%);
+}
+
+.modal-dialog {
+    width: 1000px;
+}
+
+.modal-content {
+    width: 1000px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+span {
+    color: rgb(253, 68, 68);
+}
+
+label {
+    margin-top: 6px;
+    font-weight: normal;
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+    width: 418px;
+    height: 40px;
+}
+
+.col-lg-1 {
+    width: 10%;
+}
+
+.inputs {
+    width: 850px;
+}
+
+.col-sm-4 {
+    width: 11%;
+}
+
+.col-sm-3 {
+    padding: 0;
+    margin-right: 10px;
+}
+
+.form-control {
+    height: 40px;
+}
+
+.btnmo button {
+    margin-right: 5px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    background: #409eff;
+    width: 70px;
+    height: 40px;
+}
+
+.btnmonther {
+    width: 130px;
+}

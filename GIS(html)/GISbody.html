@@ -1,0 +1,170 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-16 16:07:25
+ * @LastEditTime: 2021-09-16 20:34:29
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \考核2\GIS(html)\GISbody.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GISbody</title>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/bootstrapValidator.css" />
+    <link rel="stylesheet" href="../css/GIS(css)/GISbody.css">
+    <!-- <link rel="stylesheet" href="../css/plan(css)/planbody.css">
+    <link rel="stylesheet" href="../css/information(css)/informationbody.css"> -->
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/bootstrapValidator.js"></script>
+</head>
+
+<body>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        区镇级管理员 / 创建任务计划 &gt;
+      </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">创建任务计划</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="none-password">
+                        <div class="form-group">
+                            <label class="col-lg-1 none-lable"><span>*</span>  计划名称</label>
+                            <div class="input-body">
+                                <input type="tel" name="phone" class="form-input inputs">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-1 none-lable"><span>*</span>  采集时间</label>
+                            <div class="input-body">
+                                <input type="Verification" name="Verification" class="form-input form-Verification">
+                                <i>-</i>
+                                <input type="Verification" name="Verification" class="form-input form-Verification">
+                            </div>
+                        </div>
+                        <div class="selectbody">
+                            <div class="form-group">
+                                <label for="email" class="col-sm-4 control-label">&emsp;采集区域</label>
+                                <div class="col-sm-3">
+                                    <!-- 样式1 -->
+                                    <select class="form-control">
+                                        <option  disabled selected
+                                        hidden>请选择</option>
+                                        <option>桂林街道</option>
+                                        <option>九江镇</option>
+                                        <option>西樵镇</option>
+                                        <option>丹灶镇</option>
+                                        <option>狮山镇</option>
+                                        <option>大沥镇</option>
+                                        <option>里水镇</option>
+                                    </select>
+                                </div>
+                                <div class="btnmo">
+                                    <button>全选</button>
+                                    <button class="btnmonther">取消全选</button>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label class="col-lg-1 control-label ">采集要求</label>
+                                <div class="col-lg-8 ">
+                                    <textarea class="form-control" name="textarea" rows="2"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-body">
+                                    <input type="file" name="file" class="form-input form-file">
+                                </div>
+                            </div>
+                    </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                    <script type="text/javascript">
+                        $(document).ready(function() {
+                            $('#none-password').bootstrapValidator({
+                                    message: '信息不能为空',
+                                    fields: {
+                                        phone: {
+                                            validators: {
+                                                notEmpty: {
+                                                    message: '手机号码不能为空！'
+                                                },
+                                                regexp: {
+                                                    regexp: /^1[24578]\d{9}$/,
+                                                    message: '请输入完整手机号码！'
+                                                }
+                                            }
+                                        },
+                                        verifica: {
+                                            notEmpty: {
+                                                massage: '验证码不能为空'
+                                            },
+                                            stringLength: {
+                                                max: 6
+                                            },
+                                            regexp: {
+                                                regexp: /^[0-9]*$/
+                                            }
+                                        },
+                                        password: {
+                                            enabled: false,
+                                            validators: {
+                                                notEmpty: {
+                                                    message: '密码不能为空'
+                                                },
+                                                identical: {
+                                                    field: 'confirm_password',
+                                                    message: '两次密码不一致'
+                                                }
+                                            }
+                                        },
+                                        confirm_password: {
+                                            enabled: false,
+                                            validators: {
+                                                notEmpty: {
+                                                    message: '密码不能为空'
+                                                },
+                                                identical: {
+                                                    field: 'password',
+                                                    message: '两次密码不一致'
+                                                }
+                                            }
+                                        }
+                                    }
+                                })
+                                // 如果密码不为空，则启用密码/确认密码验证器
+                            $('#none-password').find('[name="password"]').on('keyup', function() {
+                                var isEmpty = $(this).val() == '';
+                                $('#none-password').bootstrapValidator('enableFieldValidators', 'password', !isEmpty)
+                                    .bootstrapValidator('enableFieldValidators', 'confirm_password', !isEmpty);
+                                if ($(this).val().length == 1) {
+                                    $('#none-password').bootstrapValidator('validateField', 'password')
+                                        .bootstrapValidator('validateField', 'confirm_password');
+                                }
+                            });
+                        });
+                        let prompt = document.getElementsByClassName('help-block');
+                        let inputs = document.getElementsByClassName('form-input');
+                        if (prompt == 1) {
+                            inputs.style.border = red;
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
